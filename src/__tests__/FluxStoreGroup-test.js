@@ -10,11 +10,6 @@
  * @typechecks
  */
 
-jest
-  .dontMock('Dispatcher')
-  .dontMock('FluxStore')
-  .dontMock('FluxStoreGroup');
-
 var Dispatcher = require('Dispatcher');
 var FluxStore = require('FluxStore');
 var FluxStoreGroup = require('FluxStoreGroup');
@@ -28,6 +23,7 @@ class SimpleStore extends FluxStore {
 describe('FluxStoreGroup', () => {
   var dispatcher;
   var storeA;
+  var storeB;
 
   beforeEach(() => {
     dispatcher = new Dispatcher();
